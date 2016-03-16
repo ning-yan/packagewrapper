@@ -1,0 +1,11 @@
+Package: packagewrapper
+Title: Package Wrapper
+Description: Package Wrapper
+Version: 0.9.0
+Author: Ning Yan
+Maintainer: Ning Yan <ning.now@gmail.com>
+License: MIT + file LICENSE
+Imports: devtools
+LazyData: true
+NeedsCompilation: no
+RoxygenNote: 5.0.1
