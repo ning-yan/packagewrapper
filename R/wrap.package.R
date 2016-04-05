@@ -8,7 +8,7 @@
 
 
 wrap.package =
-function (package)
+function (package = ".")
 {    
     if (!file.exists(file.path(package, "DESCRIPTION")))
     {

@@ -15,7 +15,7 @@
 
 
 load.package =
-function(package)
+function(package = ".")
 {
     package.path = system.file(package = package)
 
