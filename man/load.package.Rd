@@ -2,20 +2,20 @@
 % Please edit documentation in R/load.package.R
 \name{load.package}
 \alias{load.package}
-\title{load an R package.}
+\title{Load an R package}
 \usage{
-load.package(package)
+load.package(package = ".")
+}
+\arguments{
+\item{package}{A character string which can be either the name of an installed package or the
+path to a source package. The default value is ".", which assumes the current
+working directory to be the root directory of a source package. If an installed 
+package with the given name exists, that package will be either unwrapped or
+simply reloaded, depending on whether an inner package is found. Otherwise the
+source package at the given path is first installed, then the newly installed
+package is either unwrapped or reloaded.}
 }
 \description{
-If the input is the name of an installed package, then that package is either
-unwrapped or simply reloaded, depending on whether an inner package is found. 
-If the input is not the name of an installed package but instead the path to 
-a source package, then that package is first installed, then the newly installed
-package is either unwrapped or reloaded.
-}
-\details{
-If the source package foo is in the current directory, and the intention is to
-install from this package, then use load.package("./foo"). If load.package("foo") 
-is used then the installed version of foo will be reloaded.
+Load an R package
 }
 

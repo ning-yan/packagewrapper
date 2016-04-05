@@ -1,17 +1,14 @@
 #' Unwrap an installed wrapper package
 #'
-#' Install the inner package inside an installed wrapper package. Note that 
-#' this will overwrite the wrapper package if the package name used in the
-#' DESCRIPTION file of the wrapper package is the same as the package name
-#' used in the DESCRIPTION file of the inner package. This would indeed be
-#' the case if the wrapper package was created by the wrap.package function.
-#' This is the recommended way of using a wrapper package, since the wrapper
-#' package is only a container for its inner package, it is no longer needed
-#' once it is unwrapped and the inner package becomes available for use. 
-#'
 #' @param package
-#' Name of the installed wrapper package to be unwrapped, given as a character
-#' string.
+#' A character string which gives the name of an installed wrapper package.
+#' The inner package inside this wrapper package will be installed. Note that 
+#' the wrapper package will be over-written if it has the same name as its
+#  inner package (i.e. the name used in the inner DESCRIPTION file). This would
+#' be the case if the wrapper package was created by the wrap.package function.
+#' This is the recommended way of using a wrapper package, which is intended to
+#' be only a container for its inner package, it is no longer needed once it is
+#' unwrapped and the inner package is installed. 
 #'
 #' @export
 

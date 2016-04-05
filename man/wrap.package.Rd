@@ -2,14 +2,14 @@
 % Please edit documentation in R/wrap.package.R
 \name{wrap.package}
 \alias{wrap.package}
-\title{Convert a regular R package folder into a wrapper package.}
+\title{Convert a regular source package into a wrapper package}
 \usage{
-wrap.package(package)
+wrap.package(package = ".")
 }
 \arguments{
-\item{package}{Path to the package folder to be converted into a wrapper package.}
+\item{package}{Path to the source package to be converted into a wrapper package.}
 }
 \description{
-Convert a regular R package folder into a wrapper package.
+Convert a regular source package into a wrapper package
 }
 

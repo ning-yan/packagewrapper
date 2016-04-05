@@ -1,4 +1,4 @@
-#' Convert a regular source package into a wrapper package. 
+#' Convert a regular source package into a wrapper package
 #'
 #' @param package 
 #' Path to the source package to be converted into a wrapper package. 
@@ -44,11 +44,13 @@ function (package = ".")
   
     file.copy(file.path(inner.path, "DESCRIPTION"), ".") 
 
-    # add a copy of the standard zzz.R file for wrapper packages
+    # add a copy of the standard onAttach.R file for wrapper packages
 
     dir.create("R")
 
-    file.copy(system.file("wrapper/zzz.R", package = "packagewrapper"), "R")
+    file = system.file("wrapper/onAttach.R", package = "packagewrapper")
+
+    file.copy(file, "R")
 
     # move into the inst folder
 

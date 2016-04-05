@@ -1,14 +1,13 @@
-#' load an R package.
-#'
-#' If the input is the name of an installed package, then that package is either
-#' unwrapped or simply reloaded, depending on whether an inner package is found. 
-#' If the input is not the name of an installed package but instead the path to 
-#' a source package, then that package is first installed, then the newly installed
-#' package is either unwrapped or reloaded.
+#' Load an R package
 #' 
-#' Use load.package("./foo") if the source package foo is in the current directory,
-#' and the intention is to install from this source package. Use load.package("foo") 
-#' if the intention is to load the currently installed version of foo.
+#' @param package
+#' A character string which can be either the name of an installed package or the
+#' path to a source package. The default value is ".", which assumes the current
+#' working directory to be the root directory of a source package. If an installed 
+#' package with the given name exists, that package will be either unwrapped or
+#' simply reloaded, depending on whether an inner package is found. Otherwise the
+#' source package at the given path is first installed, then the newly installed
+#' package is either unwrapped or reloaded.
 #'
 #' @export
 
